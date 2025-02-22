@@ -123,22 +123,3 @@ void print_game_state(game_t *game){
     }
     printf("\n");
 }
-
-int main(){
-    game_t test_game;
-
-    test_game.level = 1;
-    test_game.hangman_state = 2;
-
-    test_game.tries_left = 5;
-
-    strcpy(test_game.category, "Животные");
-    strcpy(test_game.word, "cat");
-    strcpy(test_game.guessed_word, "");
-    for(int i=0;i<ALPHABET_SIZE;i++) test_game.chosen_alphas[i]= '\0';
-    test_game.chosen_alphas[0] ='c'; 
-    test_game.chosen_alphas[1] ='a';
-    print_game_state(&test_game);
-
-    return 0;
-}
